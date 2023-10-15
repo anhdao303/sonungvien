@@ -74,15 +74,19 @@ create table Category
 
 create table Product
 (
-	id int not null IDENTITY(1,1) PRIMARY KEY,
-	[name] nvarchar(50),
-	price float,
-	[description] nvarchar(MAX),
-	[image] varchar(MAX),
-	meta varchar(MAX),
-	link varchar(MAX),
-	hide bit,
-	[order] int,
-	datebegin datetime,
-	categoryId int
+	ProductID int not null IDENTITY (1,1),
+	ProductName NVARCHAR NOT NULL,
+	ProductDescription NVARCHAR NOT NULL,
+	ProductSold INT NOT NULL,
+
+	[Order] int,
+	Meta varchar,
+	Link varchar,
+	Hide bit,
+	CreatedAt DATETIME NOT NULL,
+	UpdatedAt DATETIME NOT NULL,
+
+	CategoryID int not null,
+	PRIMARY KEY (ProductID),
+	FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID)
 )
