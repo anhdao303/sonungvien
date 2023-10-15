@@ -6,31 +6,33 @@ namespace DreamerStore.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Footer")]
-    public partial class Footer
+    [Table("BillProduct")]
+    public partial class BillProduct
     {
-        public int FooterID { get; set; }
+        [Key]
+        [Column(Order = 0)]
+        public int BillID { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public string FooterName { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int DetailedProductID { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public string FooterDescription { get; set; }
+        public int Amount { get; set; }
 
         public int? Order { get; set; }
 
         [StringLength(1)]
         public string Meta { get; set; }
 
-        [StringLength(1)]
-        public string Image { get; set; }
-
         public bool? Hide { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
+
+        public virtual Bill Bill { get; set; }
+
+        public virtual DetailedProduct DetailedProduct { get; set; }
     }
 }

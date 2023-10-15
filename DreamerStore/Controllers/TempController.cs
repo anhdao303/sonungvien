@@ -16,13 +16,13 @@ namespace DreamerStore.Controllers
             return View();
         }
 
-        public ActionResult getMenu()
+        public ActionResult GetMenu()
         {
-            var v = from t in _db.menus
-                    where t.hide == true
-                    orderby t.order ascending
+            var v = from t in _db.Menus
+                    where t.Hide == true
+                    orderby t.Order ascending
                     select t;
-            return PartialView(v.toList());
+            return PartialView(v.ToList());
         }
     }
 }

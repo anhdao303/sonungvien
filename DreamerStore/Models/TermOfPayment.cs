@@ -6,20 +6,21 @@ namespace DreamerStore.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Category")]
-    public partial class Category
+    [Table("TermOfPayment")]
+    public partial class TermOfPayment
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public TermOfPayment()
         {
-            Products = new HashSet<Product>();
+            Bills = new HashSet<Bill>();
         }
 
-        public int CategoryID { get; set; }
+        [Key]
+        public int PaymentID { get; set; }
 
         [Required]
         [StringLength(1)]
-        public string CategoryName { get; set; }
+        public string PaymentName { get; set; }
 
         public int? Order { get; set; }
 
@@ -36,6 +37,6 @@ namespace DreamerStore.Models
         public DateTime UpdatedAt { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Bill> Bills { get; set; }
     }
 }

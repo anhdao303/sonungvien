@@ -6,28 +6,23 @@ namespace DreamerStore.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Category")]
-    public partial class Category
+    public partial class BillStatu
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public BillStatu()
         {
-            Products = new HashSet<Product>();
+            Bills = new HashSet<Bill>();
         }
 
-        public int CategoryID { get; set; }
+        [Key]
+        public int BillStatusID { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public string CategoryName { get; set; }
+        public int BillStatusName { get; set; }
 
         public int? Order { get; set; }
 
         [StringLength(1)]
         public string Meta { get; set; }
-
-        [StringLength(1)]
-        public string Image { get; set; }
 
         public bool? Hide { get; set; }
 
@@ -36,6 +31,6 @@ namespace DreamerStore.Models
         public DateTime UpdatedAt { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Bill> Bills { get; set; }
     }
 }

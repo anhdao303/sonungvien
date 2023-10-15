@@ -6,20 +6,38 @@ namespace DreamerStore.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Category")]
-    public partial class Category
+    [Table("Discount")]
+    public partial class Discount
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public Discount()
         {
-            Products = new HashSet<Product>();
+            DiscountUses = new HashSet<DiscountUse>();
         }
 
-        public int CategoryID { get; set; }
+        public int DiscountID { get; set; }
 
         [Required]
         [StringLength(1)]
-        public string CategoryName { get; set; }
+        public string DiscountName { get; set; }
+
+        [Required]
+        [StringLength(1)]
+        public string DiscountCalUnit { get; set; }
+
+        public int DiscountCondition { get; set; }
+
+        public int DiscountMaxValue { get; set; }
+
+        [Required]
+        [StringLength(1)]
+        public string DiscountRemark { get; set; }
+
+        public DateTime DiscountAvailableFrom { get; set; }
+
+        public DateTime DiscountAvailableUntil { get; set; }
+
+        public int DiscountValue { get; set; }
 
         public int? Order { get; set; }
 
@@ -36,6 +54,6 @@ namespace DreamerStore.Models
         public DateTime UpdatedAt { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<DiscountUse> DiscountUses { get; set; }
     }
 }
