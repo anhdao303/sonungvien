@@ -83,9 +83,9 @@ namespace DreamerStore.Models
 
         public int BillTermOfPayment { get; set; }
 
-        public int BillStatus { get; set; }
+        public int BillSttID { get; set; }
 
-        public virtual BillStatu BillStatu { get; set; }
+        public virtual BillStt BillStt { get; set; }
 
         public virtual TermOfPayment TermOfPayment { get; set; }
 

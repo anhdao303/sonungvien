@@ -156,10 +156,6 @@ D:\GitLab\sonungvien\DreamerStore\obj\Debug\DreamerStore.csproj.CoreCompileInput
 D:\GitLab\sonungvien\DreamerStore\obj\Debug\DreamerStore.csproj.CopyComplete
 D:\GitLab\sonungvien\DreamerStore\obj\Debug\DreamerStore.dll
 D:\GitLab\sonungvien\DreamerStore\obj\Debug\DreamerStore.pdb
-D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.csproj.AssemblyReference.cache
-D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.csproj.CoreCompileInputs.cache
-D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.dll
-D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.pdb
 D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\bin\DreamerStore.dll.config
 D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\bin\DreamerStore.dll
 D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\bin\DreamerStore.pdb
@@ -238,4 +234,8 @@ D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\bin\System.Web.WebPages.Razor.x
 D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\bin\Newtonsoft.Json.xml
 D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\bin\Antlr3.Runtime.pdb
 D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.csproj.AssemblyReference.cache
+D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.csproj.CoreCompileInputs.cache
 D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.csproj.CopyComplete
+D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.dll
+D:\Study\(2023-2024) Semester 1\SUV\DreamerStore\obj\Debug\DreamerStore.pdb
