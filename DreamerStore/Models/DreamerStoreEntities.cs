@@ -8,14 +8,14 @@ namespace DreamerStore.Models
     public partial class DreamerStoreEntities : DbContext
     {
         public DreamerStoreEntities()
-            : base("name=SUV")
+            : base("name=DreamerStoreEntities")
         {
         }
 
         public virtual DbSet<Banner> Banners { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<BillProduct> BillProducts { get; set; }
-        public virtual DbSet<BillStt> BillStts { get; set; }
+        public virtual DbSet<BillStatu> BillStatus { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<DetailedProduct> DetailedProducts { get; set; }
         public virtual DbSet<Discount> Discounts { get; set; }
@@ -55,13 +55,14 @@ namespace DreamerStore.Models
                 .Property(e => e.Meta)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BillStt>()
+            modelBuilder.Entity<BillStatu>()
                 .Property(e => e.Meta)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BillStt>()
+            modelBuilder.Entity<BillStatu>()
                 .HasMany(e => e.Bills)
-                .WithRequired(e => e.BillStt)
+                .WithRequired(e => e.BillStatu)
+                .HasForeignKey(e => e.BillStatus)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Category>()
