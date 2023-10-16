@@ -78,10 +78,10 @@ CREATE TABLE DetailedProduct
 	FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
 );
 
-CREATE TABLE BillStatus
+CREATE TABLE BillStt
 (
-	BillStatusID INT NOT NULL IDENTITY (1,1),
-	BillStatusName INT NOT NULL,
+	BillSttID INT NOT NULL IDENTITY (1,1),
+	BillSttName INT NOT NULL,
 
 	[Order] INT,
 	Meta VARCHAR,
@@ -89,7 +89,7 @@ CREATE TABLE BillStatus
 	CreatedAt DATETIME NOT NULL,
 	UpdatedAt DATETIME NOT NULL,
 
-	PRIMARY KEY (BillStatusID)
+	PRIMARY KEY (BillSttID)
 );
 
 CREATE TABLE TermOfPayment
@@ -135,9 +135,9 @@ CREATE TABLE Bill
 	UpdatedAt DATETIME NOT NULL,
 
 	BillTermOfPayment INT NOT NULL,
-	BillStatus INT NOT NULL,
+	BillStt INT NOT NULL,
 	PRIMARY KEY (BillID),
-	FOREIGN KEY (BillStatus) REFERENCES BillStatus(BillStatusID),
+	FOREIGN KEY (BillStt) REFERENCES BillStt(BillSttID),
 	FOREIGN KEY (BillTermOfPayment) REFERENCES TermOfPayment(PaymentID)
 );
 
